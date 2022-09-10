@@ -13,7 +13,13 @@ Plug 'KeitaNakamura/tex-conceal.vim'
     let g:tex_conceal='abdmg'
     hi Conceal ctermbg=none
 
+set number
 setlocal spell
 set spelllang=en_us
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
+Plug 'dylanaraps/wal'
+    colorscheme wal
+    set background=dark
+
+execute pathogen#infect()
