@@ -1,2 +1,2 @@
-sudo apt update
-sudo apt install neovim
+sudo apt update -y
+sudo apt install neovim -y
