@@ -14,4 +14,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 sudo apt install python3-pip -y
 sudo pip3 install pywal
-pywal --theme base16-nord
+wal --theme base16-nord
