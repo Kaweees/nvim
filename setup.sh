@@ -6,3 +6,4 @@ mkdir .config
 cd .config
 mkdir nvim
 cd nvim
+nvim init.vim
