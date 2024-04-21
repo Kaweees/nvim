@@ -1,2 +1,3 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv" vim.cmd.Ex)
+-- set <leader>pv to exectute a command while in normal mode
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
