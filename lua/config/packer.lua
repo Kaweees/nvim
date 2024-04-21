@@ -16,4 +16,36 @@ return require('packer').startup(function(use)
   }
   -- Fast Syntax Highlighting tree
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use ('nvim-treesitter/playground')
+  -- Harpoon
+  use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+  }
+  -- undotree
+  use "mbbill/undotree"
+  -- fugitive
+  use "tpope/vim-fugitive"
+  -- LSP
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
+    requires = {
+      --- Uncomment the two plugins below if you want to manage the language servers from neovim
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'L3MON4D3/LuaSnip'},
+    }
+  }
+ use 'DaikyXendo/nvim-material-icon'
 end)
