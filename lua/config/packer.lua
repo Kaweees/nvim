@@ -8,10 +8,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- Gruvbox theme
   use "ellisonleao/gruvbox.nvim"
-  -- Fuzzy Finder
+  -- Telescope (Fuzzy Finder)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
   -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
-  }  
+  }
+  -- Fast Syntax Highlighting tree
+  use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 end)

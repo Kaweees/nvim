@@ -9,5 +9,6 @@ $XDG_CONFIG_HOME/nvim
 
 ```
 :h rtp
+:PackerSync
 
 ```
