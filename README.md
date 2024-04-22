@@ -21,7 +21,6 @@
 <div align="left">
   <h1><em><a href="https://miguelvf.dev/blog/dotfiles/nvim">~nvim</a></em></h1>
 </div>
-<div></div>
 
 <!-- ABOUT THE PROJECT -->
 
