@@ -67,6 +67,56 @@ To get a local copy of the project up and running on your machine, follow these 
    :h rtp
    ```
 
+<!-- USAGE EXAMPLES -->
+## Usage
+
+### Available Plugins
+
+* [Alpha](https://st.suckless.org/patches/alpha/) : This patch allows users to change the opacity of the background. Note that you need an X composite manager (e.g. compton, xcompmgr) to make this patch effective.
+* [Clipboard](https://st.suckless.org/patches/clipboard/) : This trivial patch sets CLIPBOARD on selection.
+* [font2](https://st.suckless.org/patches/font2/) : This patch allows to add spare font besides default.
+* [Wide glyph](https://st.suckless.org/patches/glyph_wide_support/) : This patch allows to display the full glyph instead of it being cut off. See also [here](https://github.com/LukeSmithxyz/st/pull/349)
+
+### Keyboard Shortcuts
+To enter custom commands into nvim, you must first enter a specific keybind, which is called the leader, followed by the command keybind while in a specific editor mode. My prefix key is <kbd>space</kbd>.
+
+To refresh tmux and install new plugins, type <kbd>prefix</kbd> + <kbd>I</kbd> (capital i, as in Install)
+
+### Window Management Commands
+
+| Command Keybind | Command Description |
+| --------------- | ------------------- |
+| <kbd>prefix</kbd> + <kbd>c</kbd> | create new window and switch to it |
+| <kbd>prefix</kbd> + <kbd>#</kbd> | switch to window # |
+| <kbd>prefix</kbd> + <kbd>n</kbd> | switch to next window |
+| <kbd>prefix</kbd> + <kbd>p</kbd> | switch to previous window |
+| <kbd>prefix</kbd> + <kbd>:</kbd> | swap window with next window |
+| <kbd>prefix</kbd> + <kbd>;</kbd> | swap window with previous window |
+| <kbd>prefix</kbd> + <kbd>&</kbd> | kill window and all panes in it |
+
+
+Mode | Keybind | Action |
+--- | --- | --- |
+Normal | `<leader>` + `p` + `v` | Execute `:PackerSync` |
+
+
+<!-- Normal | Copy        | `ctrl` + `shift` + `c` |
+Paste       | `ctrl` + `shift` + `v` |
+Zoom In     | `ctrl` + `shift` + `PageUp` |
+Zoom Out    | `ctrl` + `shift` + `PageDown` |
+Reset Zoom  | `ctrl` + `shift` + `Home` | -->
+
+<!-- PROJECT FILE STRUCTURE -->
+## Project Structure
+
+```
+. nvim/
+├── after/                         - configuration files for various services
+├── lua/config/                    - local data files for various services
+├── init.lua                       - scripts available to the user at runtime
+└── README.md                      - you are here
+```
+
 ## License
 
 The source code for my website is distributed under the terms of the GNU General Public License v3.0, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
