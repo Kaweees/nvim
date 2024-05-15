@@ -48,4 +48,8 @@ return require('packer').startup(function(use)
     }
   }
  use 'DaikyXendo/nvim-material-icon'
+  -- WakaTime (Time Tracking)
+  use 'wakatime/vim-wakatime'
+  -- Discord Rich Presence
+  use 'andweeb/presence.nvim'
 end)

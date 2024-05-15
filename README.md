@@ -1,3 +1,8 @@
+<!--
+*** This readme was adapted from Best-README-Template.
+  https://github.com/othneildrew/Best-README-Template
+-->
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -46,7 +51,7 @@ My custom configurations for neovim with an emphasis on functionality and effici
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Neovim installed](https://github.com/neovim/neovim/blob/master/INSTALL.md) on your machine.
+Before attempting to build this project, make sure you have [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md), [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart), and a [Nerd Font](https://www.nerdfonts.com) installed on your machine.
 
 ### Installation
 
@@ -57,14 +62,19 @@ To get a local copy of the project up and running on your machine, follow these 
    git clone https://github.com/Kaweees/nvim.git
    cd nvim
    ```
-2. Install the project dependencies
+2. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or run one of these commands to find out:
    ```sh
-   :PackerSync
+   :echo stdpath('config') # Execute while in nvim
+   :h rtp # Execute while in nvim
    ```
-3. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or run one of these commands to find out:
+3. Install the project dependencies
    ```sh
-   :echo stdpath('config')
-   :h rtp
+   nvim +PlugInstall # Execute from the command line
+   :PackerSync # Execute while in nvim
+   ```
+4. If you want to use the [WakaTime](https://wakatime.com) plugin, configure your API key.
+   ```sh
+   :WakaTimeApiKey # Execute while in nvim
    ```
 
 <!-- USAGE EXAMPLES -->
@@ -76,6 +86,8 @@ To get a local copy of the project up and running on your machine, follow these 
 * [Clipboard](https://st.suckless.org/patches/clipboard/) : This trivial patch sets CLIPBOARD on selection.
 * [font2](https://st.suckless.org/patches/font2/) : This patch allows to add spare font besides default.
 * [Wide glyph](https://st.suckless.org/patches/glyph_wide_support/) : This patch allows to display the full glyph instead of it being cut off. See also [here](https://github.com/LukeSmithxyz/st/pull/349)
+
+_To see all of the available plugins, please refer to [packer.lua](./lua/config/packer.lua)_
 
 ### Keyboard Shortcuts
 To enter custom commands into nvim, you must first enter a specific keybind, which is called the leader, followed by the command keybind while in a specific editor mode. My prefix key is <kbd>space</kbd>.
@@ -111,9 +123,12 @@ Reset Zoom  | `ctrl` + `shift` + `Home` | -->
 
 ```
 . nvim/
-├── after/                         - configuration files for various services
-├── lua/config/                    - local data files for various services
-├── init.lua                       - scripts available to the user at runtime
+├── after/plugins/                 - plugin-specific configurations
+├── lua/config/
+│   ├── packer.lua                 - packages installed by packer.nvim
+│   ├── remap.lua                  - keybinds and leader configuration
+│   └── set.lua                    - miscellaneous settings
+├── init.lua                       - Entry point, loads all plugins and configurations
 └── README.md                      - you are here
 ```
 
