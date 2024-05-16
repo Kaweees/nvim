@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- Gruvbox theme
   use "ellisonleao/gruvbox.nvim"
+  --- Utility functions for neovim plugins
+  use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
   -- Telescope (Fuzzy Finder)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',

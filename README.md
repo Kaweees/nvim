@@ -82,41 +82,30 @@ To get a local copy of the project up and running on your machine, follow these 
 
 ### Available Plugins
 
-* [Alpha](https://st.suckless.org/patches/alpha/) : This patch allows users to change the opacity of the background. Note that you need an X composite manager (e.g. compton, xcompmgr) to make this patch effective.
-* [Clipboard](https://st.suckless.org/patches/clipboard/) : This trivial patch sets CLIPBOARD on selection.
-* [font2](https://st.suckless.org/patches/font2/) : This patch allows to add spare font besides default.
-* [Wide glyph](https://st.suckless.org/patches/glyph_wide_support/) : This patch allows to display the full glyph instead of it being cut off. See also [here](https://github.com/LukeSmithxyz/st/pull/349)
+* [packer.nvim](https://github.com/wbthomason/packer.nvim/) : This plugin is an easy-to-use plugin manager and installs all of the other plugins listed here.
+* [telescope.nvim](https://github.com/pnvim-telescope/telescope.nvim/) : This plugin provides extensible fuzzy finder over lists.
+* [harpoon](https://github.com/ThePrimeagen/harpoon2) : This plugin provides a quick way to switch between specific files in a project and execute project specific commands.
+* [vim-wakatime](https://github.com/wakatime/vim-wakatime/) : This plugin allows programming activity to automatically be tracked and displayed in your WakaTime dashboard.
 
 _To see all of the available plugins, please refer to [packer.lua](./lua/config/packer.lua)_
 
 ### Keyboard Shortcuts
 To enter custom commands into nvim, you must first enter a specific keybind, which is called the leader, followed by the command keybind while in a specific editor mode. My prefix key is <kbd>space</kbd>.
 
-To refresh tmux and install new plugins, type <kbd>prefix</kbd> + <kbd>I</kbd> (capital i, as in Install)
+To refresh neovim and install new plugins, type <kbd>leader</kbd> + <kbd>I</kbd> (capital i, as in Install) while in normal mode.
 
-### Window Management Commands
+| Mode | Command Keybind | Command Description |
+| ---- | --------------- | ------------------- |
+| normal | <kbd>leader</kbd> + <kbd>c</kbd> | create new window and switch to it |
+| a | <kbd>leader</kbd> + <kbd>#</kbd> | switch to window # |
+| a | <kbd>leader</kbd> + <kbd>n</kbd> | switch to next window |
+| a | <kbd>leader</kbd> + <kbd>p</kbd> | switch to previous window |
+| a | <kbd>leader</kbd> + <kbd>:</kbd> | swap window with next window |
+| a  | <kbd>leader</kbd> + <kbd>;</kbd> | swap window with previous window |
+| a   | <kbd>leader</kbd> + <kbd>&</kbd> | kill window and all panes in it |
 
-| Command Keybind | Command Description |
-| --------------- | ------------------- |
-| <kbd>prefix</kbd> + <kbd>c</kbd> | create new window and switch to it |
-| <kbd>prefix</kbd> + <kbd>#</kbd> | switch to window # |
-| <kbd>prefix</kbd> + <kbd>n</kbd> | switch to next window |
-| <kbd>prefix</kbd> + <kbd>p</kbd> | switch to previous window |
-| <kbd>prefix</kbd> + <kbd>:</kbd> | swap window with next window |
-| <kbd>prefix</kbd> + <kbd>;</kbd> | swap window with previous window |
-| <kbd>prefix</kbd> + <kbd>&</kbd> | kill window and all panes in it |
+<!-- Normal | `<leader>` + `p` + `v` | Execute `:PackerSync` | -->
 
-
-Mode | Keybind | Action |
---- | --- | --- |
-Normal | `<leader>` + `p` + `v` | Execute `:PackerSync` |
-
-
-<!-- Normal | Copy        | `ctrl` + `shift` + `c` |
-Paste       | `ctrl` + `shift` + `v` |
-Zoom In     | `ctrl` + `shift` + `PageUp` |
-Zoom Out    | `ctrl` + `shift` + `PageDown` |
-Reset Zoom  | `ctrl` + `shift` + `Home` | -->
 
 <!-- PROJECT FILE STRUCTURE -->
 ## Project Structure
