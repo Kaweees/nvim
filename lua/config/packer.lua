@@ -54,4 +54,6 @@ return require('packer').startup(function(use)
   use 'wakatime/vim-wakatime'
   -- Discord Rich Presence
   use 'andweeb/presence.nvim'
+  -- GitHub Copilot (AI Autocompletion)
+  use { "zbirenbaum/copilot.lua" }
 end)

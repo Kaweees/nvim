@@ -62,7 +62,7 @@ To get a local copy of the project up and running on your machine, follow these 
    git clone https://github.com/Kaweees/nvim.git
    cd nvim
    ```
-2. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or run one of these commands to find out:
+2. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible/) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles/). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or run one of these commands to find out:
    ```sh
    :echo stdpath('config') # Execute while in nvim
    :h rtp # Execute while in nvim
@@ -76,6 +76,10 @@ To get a local copy of the project up and running on your machine, follow these 
    ```sh
    :WakaTimeApiKey # Execute while in nvim
    ```
+5. If you want to use the [GitHub Copilot](https://github.com/zbirenbaum/lua/) plugin, authenticate your account by executing the following command while in nvim.
+   ```sh
+   :Copilot auth
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -86,6 +90,7 @@ To get a local copy of the project up and running on your machine, follow these 
 * [telescope.nvim](https://github.com/pnvim-telescope/telescope.nvim/) : This plugin provides extensible fuzzy finder over lists.
 * [harpoon](https://github.com/ThePrimeagen/harpoon2) : This plugin provides a quick way to switch between specific files in a project and execute project specific commands.
 * [vim-wakatime](https://github.com/wakatime/vim-wakatime/) : This plugin allows programming activity to automatically be tracked and displayed in your WakaTime dashboard.
+* [copilot.lua](https://github.com/zbirenbaum/copilot.lua/) : This plugin provides an efficent way to use GitHub Copilot AI to generate code snippets.
 
 _To see all of the available plugins, please refer to [packer.lua](./lua/config/packer.lua)_
 
