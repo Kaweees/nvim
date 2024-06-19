@@ -56,4 +56,7 @@ return require('packer').startup(function(use)
   use 'andweeb/presence.nvim'
   -- GitHub Copilot (AI Autocompletion)
   use { "zbirenbaum/copilot.lua" }
+  -- C/C++ Code Formatting
+  use { "rhysd/vim-clang-format" }
 end)
+
