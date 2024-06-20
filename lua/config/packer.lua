@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},
     }
   }
- use 'DaikyXendo/nvim-material-icon'
+  use 'DaikyXendo/nvim-material-icon'
   -- WakaTime (Time Tracking)
   use 'wakatime/vim-wakatime'
   -- Discord Rich Presence
@@ -60,5 +60,9 @@ return require('packer').startup(function(use)
   use { "rhysd/vim-clang-format" }
   -- Colorizer
   use { "norcalli/nvim-colorizer.lua" }
+  use ({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)
 
