@@ -58,5 +58,7 @@ return require('packer').startup(function(use)
   use { "zbirenbaum/copilot.lua" }
   -- C/C++ Code Formatting
   use { "rhysd/vim-clang-format" }
+  -- Colorizer
+  use { "norcalli/nvim-colorizer.lua" }
 end)
 
