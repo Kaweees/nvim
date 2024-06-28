@@ -67,16 +67,21 @@ To get a local copy of the project up and running on your machine, follow these 
    :echo stdpath('config') # Execute while in nvim
    :h rtp # Execute while in nvim
    ```
-3. Install the project dependencies
+3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim)
+   ```sh
+   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+   ```
+4. Install the project dependencies
    ```sh
    nvim +PlugInstall # Execute from the command line
    :PackerSync # Execute while in nvim
    ```
-4. If you want to use the [WakaTime](https://wakatime.com) plugin, configure your API key.
+5. If you want to use the [WakaTime](https://wakatime.com) plugin, configure your API key.
    ```sh
    :WakaTimeApiKey # Execute while in nvim
    ```
-5. If you want to use the [GitHub Copilot](https://github.com/zbirenbaum/lua/) plugin, authenticate your account by executing the following command while in nvim.
+6. If you want to use the [GitHub Copilot](https://github.com/zbirenbaum/lua/) plugin, authenticate your account by executing the following command while in nvim.
    ```sh
    :Copilot auth
    ```
