@@ -51,7 +51,7 @@ My custom configurations for neovim with an emphasis on functionality and effici
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md), [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart), and a [Nerd Font](https://www.nerdfonts.com) installed on your machine.
+Before attempting to build this project, make sure you have [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md), and a [Nerd Font](https://www.nerdfonts.com) installed on your machine.
 
 ### Installation
 
@@ -67,7 +67,7 @@ To get a local copy of the project up and running on your machine, follow these 
    :echo stdpath('config') # Execute while in nvim
    :h rtp # Execute while in nvim
    ```
-3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim)
+3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
    ```sh
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -104,7 +104,7 @@ To enter custom commands into nvim, you must first enter a specific keybind, whi
 
 To refresh neovim and install new plugins, type <kbd>leader</kbd> + <kbd>I</kbd> (capital i, as in Install) while in normal mode.
 
-| Mode | Command Keybind | Command Description |
+<!-- | Mode | Command Keybind | Command Description |
 | ---- | --------------- | ------------------- |
 | normal | <kbd>leader</kbd> + <kbd>c</kbd> | create new window and switch to it |
 | a | <kbd>leader</kbd> + <kbd>#</kbd> | switch to window # |
@@ -112,7 +112,7 @@ To refresh neovim and install new plugins, type <kbd>leader</kbd> + <kbd>I</kbd>
 | a | <kbd>leader</kbd> + <kbd>p</kbd> | switch to previous window |
 | a | <kbd>leader</kbd> + <kbd>:</kbd> | swap window with next window |
 | a  | <kbd>leader</kbd> + <kbd>;</kbd> | swap window with previous window |
-| a   | <kbd>leader</kbd> + <kbd>&</kbd> | kill window and all panes in it |
+| a   | <kbd>leader</kbd> + <kbd>&</kbd> | kill window and all panes in it | -->
 
 <!-- Normal | `<leader>` + `p` + `v` | Execute `:PackerSync` | -->
 
