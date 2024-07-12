@@ -62,11 +62,19 @@ To get a local copy of the project up and running on your machine, follow these 
    git clone https://github.com/Kaweees/nvim.git
    cd nvim
    ```
-2. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible/) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles/). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or run one of these commands to find out:
+2. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible/) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles/). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or Neovim's configurations are located under the following paths, depending on your OS:
+    | Operating System | File Path |
+    | :- | :--- |
+    | Linux, MacOS | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
+    | Windows (cmd)| `%userprofile%\AppData\Local\nvim\` |
+    | Windows (powershell)| `$env:USERPROFILE\AppData\Local\nvim\` |
+   If you are still unsure, run one of these commands to find out:
    ```sh
    :echo stdpath('config') # Execute while in nvim
    :h rtp # Execute while in nvim
    ```
+   
+
 3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
    ```sh
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\

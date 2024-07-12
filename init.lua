@@ -1,1 +1,2 @@
+set termguicolors
 require("config")
