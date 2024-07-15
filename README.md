@@ -82,8 +82,7 @@ To get a local copy of the project up and running on your machine, follow these 
 3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
 
    ```sh
-   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+   git clone --depth 1 https://github.com/wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim
    ```
 
 4. Install the project dependencies
