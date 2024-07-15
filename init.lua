@@ -1,3 +1,3 @@
-set background=dark " or light if you want light mode
-colorscheme gruvbox
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 require("config")

@@ -52,7 +52,9 @@ My custom configurations for neovim with an emphasis on functionality and effici
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md), and a [Nerd Font](https://www.nerdfonts.com) installed on your machine.
+Before attempting to build this project, make sure you have [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md), a [Nerd Font](https://www.nerdfonts.com) installed on your machine, and terminal that supports [24-bit truecolor](https://github.com/termstandard/colors) and Unicode undercurl (special underlines under text).
+
+```sh
 
 ### Installation
 
@@ -77,19 +79,6 @@ To get a local copy of the project up and running on your machine, follow these 
    ```sh
    :echo stdpath('config') # Execute while in nvim
    :h rtp # Execute while in nvim
-   ```
-
-3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
-
-   ```sh
-   git clone --depth 1 https://github.com/wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-   ```
-
-4. Install the project dependencies
-
-   ```sh
-   nvim +PlugInstall # Execute from the command line
-   :PackerSync # Execute while in nvim
    ```
 
 5. If you want to use the [WakaTime](https://wakatime.com) plugin, configure your API key.
@@ -138,13 +127,18 @@ To refresh neovim and install new plugins, type <kbd>leader</kbd> + <kbd>I</kbd>
 <!-- PROJECT FILE STRUCTURE -->
 ## Project Structure
 
-```
-. nvim/
+```sh
+~/.config/nvim
 ├── after/plugins/                 - plugin-specific configurations
-├── lua/config/
-│   ├── packer.lua                 - packages installed by packer.nvim
-│   ├── remap.lua                  - keybinds and leader configuration
-│   └── set.lua                    - miscellaneous settings
+├── lua
+│   ├── config
+│   │   ├── lazy.lua               - packages installed by lazy.nvim
+│   │   ├── remap.lua              - keybinds and leader configuration
+│   │   └── set.lua                - miscellaneous settings
+│   └── plugins
+│       ├── spec1.lua
+│       ├── **
+│       └── spec2.lua
 ├── init.lua                       - Entry point, loads all plugins and configurations
 └── README.md                      - you are here
 ```
