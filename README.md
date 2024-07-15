@@ -39,6 +39,7 @@ My custom configurations for neovim with an emphasis on functionality and effici
 
 <!-- PROJECT PREVIEW -->
 ## Preview
+
 <p align="center">
   <img src="assets/img/screenshot.png"
   width = "80%"
@@ -58,38 +59,48 @@ Before attempting to build this project, make sure you have [Neovim](https://git
 To get a local copy of the project up and running on your machine, follow these simple steps:
 
 1. Clone the project repository
+
    ```sh
    git clone https://github.com/Kaweees/nvim.git
    cd nvim
    ```
+
 2. Create a symlink from the cloned folder to where neovim expects its configuration to be located. Personally, I use [ansible](https://github.com/Kaweees/ansible/) to create symlinks for all of my [dotfiles](https://github.com/Kaweees/dotfiles/). If you are not sure where it is, check `$XDG_CONFIG_HOME/nvim` or Neovim's configurations are located under the following paths, depending on your OS:
-    | Operating System | File Path |
-    | :- | :--- |
-    | Linux, MacOS | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
-    | Windows (cmd)| `%userprofile%\AppData\Local\nvim\` |
-    | Windows (powershell)| `$env:USERPROFILE\AppData\Local\nvim\` |
+   | Operating System | File Path |
+   | :- | :--- |
+   | Linux, MacOS | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
+   | Windows (cmd)| `%userprofile%\AppData\Local\nvim\` |
+   | Windows (powershell)| `$env:USERPROFILE\AppData\Local\nvim\` |
+
    If you are still unsure, run one of these commands to find out:
+
    ```sh
    :echo stdpath('config') # Execute while in nvim
    :h rtp # Execute while in nvim
    ```
-   
 
 3. Install [packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+
    ```sh
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
    ```
+
 4. Install the project dependencies
+
    ```sh
    nvim +PlugInstall # Execute from the command line
    :PackerSync # Execute while in nvim
    ```
+
 5. If you want to use the [WakaTime](https://wakatime.com) plugin, configure your API key.
+
    ```sh
    :WakaTimeApiKey # Execute while in nvim
    ```
+
 6. If you want to use the [GitHub Copilot](https://github.com/zbirenbaum/lua/) plugin, authenticate your account by executing the following command while in nvim.
+
    ```sh
    :Copilot auth
    ```
@@ -108,6 +119,7 @@ To get a local copy of the project up and running on your machine, follow these 
 _To see all of the available plugins, please refer to [packer.lua](./lua/config/packer.lua)_
 
 ### Keyboard Shortcuts
+
 To enter custom commands into nvim, you must first enter a specific keybind, which is called the leader, followed by the command keybind while in a specific editor mode. My prefix key is <kbd>space</kbd>.
 
 To refresh neovim and install new plugins, type <kbd>leader</kbd> + <kbd>I</kbd> (capital i, as in Install) while in normal mode.
@@ -123,7 +135,6 @@ To refresh neovim and install new plugins, type <kbd>leader</kbd> + <kbd>I</kbd>
 | a   | <kbd>leader</kbd> + <kbd>&</kbd> | kill window and all panes in it | -->
 
 <!-- Normal | `<leader>` + `p` + `v` | Execute `:PackerSync` | -->
-
 
 <!-- PROJECT FILE STRUCTURE -->
 ## Project Structure
