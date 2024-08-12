@@ -6,7 +6,8 @@ return require("lazy").setup({
   spec = {
     -- Colorscheme:
     -- The colorscheme should be available when starting Neovim.
-    { "ellisonleao/gruvbox.nvim",
+    { "f4z3r/gruvbox-material.nvim",
+      name = 'gruvbox-material',
       lazy = false, -- Load the colorscheme immediately
       priority = 1000, -- Set a high priority
       config = true,
@@ -63,7 +64,12 @@ return require("lazy").setup({
       cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
       ft = { "markdown" },
       build = function() vim.fn["mkdp#util#install"]() end,
-    }
+    },
+    -- Lualine
+    {
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' }
+  }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

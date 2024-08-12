@@ -54,8 +54,6 @@ My custom configurations for neovim with an emphasis on functionality and effici
 
 Before attempting to build this project, make sure you have [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md), a [Nerd Font](https://www.nerdfonts.com) installed on your machine, and terminal that supports [24-bit truecolor](https://github.com/termstandard/colors) and Unicode undercurl (special underlines under text).
 
-```sh
-
 ### Installation
 
 To get a local copy of the project up and running on your machine, follow these simple steps:
