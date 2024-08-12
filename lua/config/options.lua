@@ -10,6 +10,23 @@ vim.opt.number = true
 -- Add relative line numbers, to help with jumping.
 vim.opt.relativenumber = true
 
+-- Automatically save before running commands that expect a saved file
+vim.opt.autowriteall = true
+
+-- Enable line wrapping
+vim.opt.wrap = true
+
+-- Automatically indent new lines
+vim.opt.autoindent = true
+
+-- Enable syntax highlighting
+vim.opt.syntax = 'enable'
+
+-- Automatically go to the next line when a line is wrapped
+vim.opt.linebreak = true
+
+-- Automatically go to t
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
